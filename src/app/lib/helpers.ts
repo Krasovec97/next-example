@@ -6,13 +6,15 @@ const globalHeaders = {
     'Client-Version': process.env.CLIENT_VERSION,
 }
 
-function mergeHeaders (...headerInits) {
+function mergeHeaders (...headerInits: any[]) {
     let result = {}
     headerInits.forEach((init) => {
-        new Headers(init).forEach((value, key) => {
+        new Headers(init).forEach((value:any , key: any) => {
             if (value === 'null' || value === 'undefined') {
+                // @ts-ignore
                 delete result[key]
             } else {
+                // @ts-ignore
                 result[key] = value
             }
         })
@@ -20,7 +22,7 @@ function mergeHeaders (...headerInits) {
     return result
 }
 
-export default async function fetchApi(input, options) {
+export default async function fetchApi(input: string, options: any) {
     // your headers
     const defaultHeaders = {
         ...globalHeaders

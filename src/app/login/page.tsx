@@ -9,7 +9,7 @@ export default function Login() {
 
     return (
         <>
-            <form action={dispatch}>
+            <form name="loginForm" action={dispatch}>
                 <input className="form-control" type="email" name="email" placeholder="Email" required/>
                 <input className="form-control" type="password" name="password" placeholder="Password" required/>
                 {errorMessage &&

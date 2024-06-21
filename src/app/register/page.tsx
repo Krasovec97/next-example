@@ -39,7 +39,7 @@ export default function Register() {
                 }
                 {(currentPassword !== '' && passwordErrors.length > 0) &&
                     <ul className="alert alert-danger">
-                        {passwordErrors.map((error, index) => <li>{error}</li>)}
+                        {passwordErrors.map((error, index) => <li key={index}>{error}</li>)}
                     </ul>
                 }
 

@@ -41,3 +41,7 @@ next-env.d.ts
 /.idea/php.xml
 /.idea/vcs.xml
 /.idea/watcherTasks.xml
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
